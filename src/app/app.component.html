@@ -1,0 +1,92 @@
+
+@if (ventanaPricipal) {
+    <main>
+        <div>
+            @defer {
+                <img src="../assets/canchaPrincipal.jpg" alt="">
+            }
+        </div>
+        <article>
+            <app-marcador 
+                (ventanaPrincipal)="vPrincipal($event)" 
+                (ventanaEstadistica)="vEstadistica($event)"
+                (totalGoles_1)="totalGoles_1($event)"
+                (totalGoles_2)="totalGoles_2($event)"
+                (nombreTeam1)="cambiarNombre1($event)"
+                (nombreTeam2)="cambiarNombre2($event)"
+                (teamGanador)="mostrarEquipoGanador($event)">
+            </app-marcador>
+        </article>
+    </main>
+}
+@if (ventanaEstadistica) {
+    <section class="seguandaCancha">
+        @defer () {
+            <img src="../assets/seguandaCancha.jpg" alt="">
+        }
+        <article class="seguandaCancha__article">
+            <section class="sectionNombreEquipos">
+                <div class="primerdiv"><h1>{{nombreTeam1}}</h1></div>
+                <div class="segundodiv"><h1>{{nombreTeam2}}</h1></div>
+            </section>
+            <section class="contenInfoPartido">
+                <div class="infoEquipo">
+                    <article></article>
+                    <article>{{golesEquipo1}}</article>
+                    <article>{{TOTALSHOTS_1}}</article>
+                    <article>{{FOULS_1}}</article>
+                    <article>{{OFFSIDES_1}}</article>
+                    <article>{{CORNERS_1}}</article>
+                    <article>90%</article>
+                </div>
+                <div class="infoGeneral">
+                    <article>STATISTIC</article>
+                    <article>GOALS</article>
+                    <article>TOTAL SHOTS</article>
+                    <article>FOULS</article>
+                    <article>OFFSIDES</article>
+                    <article>CORNERS</article>
+                    <article>BALL POSSESSION %</article>
+                </div>
+                <div class="infoEquipo">
+                    <article></article>
+                    <article>{{golesEquipo2}}</article>
+                    <article>{{TOTALSHOTS_2}}</article>
+                    <article>{{FOULS_2}}</article>
+                    <article>{{OFFSIDES_2}}</article>
+                    <article>{{CORNERS_2}}</article>
+                    <article>90%</article>
+                </div>
+            </section>
+            
+        </article>
+        <button (click)="mostrarVentanaFinal()">Continue</button>
+    </section>
+}
+
+@if (ventanaFinal) {
+    <section class="gifVentanaFinal">
+        @defer () {
+            <img src="../assets/200.webp" alt="">
+        }
+        <div>
+            <h1>🥰✨ Felicidades ✨🥰<br> {{equipoGanador}}</h1>
+        </div>
+        <button class="buttonBack" (click)="devolverEstadistica()">Back</button>
+        <button class="buttonFinish" (click)="finaizarTodo()">Finish</button>
+    </section>
+}
+
+@if (ventanaFinalEmpate) {
+    <section class="gifVentanaFinal">
+        @defer () {
+            <img src="../assets/300.webp" alt="">
+        }
+        <div>
+            <h1>🥲  Pues es un  🥲<br> Empate</h1>
+        </div>
+        <button class="buttonBack" (click)="devolverEstadistica()">Back</button>
+        <button class="buttonFinish" (click)="finaizarTodo()">Finish</button>
+    </section>
+}
+<router-outlet />

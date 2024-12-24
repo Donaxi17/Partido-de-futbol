@@ -1,0 +1,159 @@
+<main   >
+    <article>
+        <div class="nombresEquipos">
+            <div class="coco">
+                @if (selectEquipo1) {
+                    <section>
+                        <div (click)="equipo1Manchester()">
+                            <p>Manchester</p>
+                            <img src="../../assets/seletEquipo/ciudad.png" alt="">
+                        </div>
+                        <div (click)="equipo1Bayern()">
+                            <p>Bayern</p>
+                            <img src="../../assets/seletEquipo/bayern.png" alt="">
+                        </div>
+                        <div (click)="equipo1Liverpool()">
+                            <p>Liverpool</p>
+                            <img src="../../assets/seletEquipo/liverpool.png" alt="">
+                        </div>
+                        <div (click)="equipo1Real()">
+                            <p>Real</p>
+                            <img src="../../assets/seletEquipo/real.png" alt="">
+                        </div>
+                        <div (click)="equipo1Barcelona()">
+                            <p>Barcelona</p>
+                            <img src="../../assets/seletEquipo/barcelona.png" alt="">
+                        </div>
+                    </section>
+                }
+                @if (fondoLogoequipo1) {
+                    <div class="fusionLogo coco">
+                        <img src="../../assets/marcoEquipo.jpg" alt="" class="fondoLogo">
+                        @if (mostrarLogoequipo1) {
+                            <img [src]="imagePath" alt="" class="fusionLogo--equipo">
+                        }
+                    </div>
+                }
+                @if (ocultarBtnSelectTeam) {
+                    <button (click)="selectEquipo_1()">Select Team</button>
+                } 
+            </div>
+            <h1>VS</h1>
+            <div class="coco">
+                @if (selectEquipo2) {
+                    <section>
+                        <div (click)="equipo2Manchester()">
+                            <p>Manchester</p>
+                            <img src="../../assets/seletEquipo/ciudad.png" alt="">
+                        </div>
+                        <div (click)="equipo2Bayern()">
+                            <p>Bayern</p>
+                            <img src="../../assets/seletEquipo/bayern.png" alt="">
+                        </div>
+                        <div (click)="equipo2Liverpool()">
+                            <p>Liverpool</p>
+                            <img src="../../assets/seletEquipo/liverpool.png" alt="">
+                        </div>
+                        <div (click)="equipo2Real()">
+                            <p>Real</p>
+                            <img src="../../assets/seletEquipo/real.png" alt="">
+                        </div>
+                        <div (click)="equipo2Barcelona()">
+                            <p>Barcelona</p>
+                            <img src="../../assets/seletEquipo/barcelona.png" alt="">
+                        </div>
+                    </section>
+                }
+                @if (fondoLogoequipo2) {
+                    <div class="fusionLogo coco">
+                        <img src="../../assets/marcoEquipo.jpg" alt="" class="fondoLogo">
+                        @if (mostrarLogoequipo2) {
+                            <img [src]="imagePath2" alt="" class="fusionLogo--equipo">
+                        }
+                    </div>
+                }
+                @if (ocultarBtnSelectTeam) {
+                    <button (click)="selectEquipo_2()">Select Team</button>
+                } 
+            </div>
+        </div>
+        <section>
+            @if (partidoComensara) {
+            <section class="partidoComensara">
+                <h1>El Partido Comenzará en</h1>
+            </section>
+            }
+            @if (partidoFinalizara) {
+            <section class="partidoFinalizara">
+                <h1>EL PARTIDO FINALIZARÁ EN 5 SEGUNDOS</h1>
+            </section>
+            }
+        </section>
+    </article>
+</main>
+
+<section class="contenPartido">
+    <div class="contenPartido--tiempo">
+        @if (seletTiempo) {
+        <article (click)="mostrarOpTiempo()">
+            <h5>Select Time</h5>
+        </article>
+        }
+        <section class="tiempo">
+            @if (mostrar_Op_Tiempo) {
+            <section class="opTiempo">
+                <button (click)="cambiartiempo('1')">1 minuto</button>
+                <button (click)="cambiartiempo('2')">2 minutos</button>
+                <button (click)="cambiartiempo('5')">5 minutos</button>
+                <button (click)="cambiartiempo('p')">Personalizado</button>
+                <button (click)="cambiartiempo('')">Cancelar</button>
+            </section>
+            }
+            @if (personalizarTiempo) {
+            <section class="tiempoPersonalizado">
+                <input type="number" [(ngModel)]="valorNumero">
+                <div>
+                    <button class="btnTiempoAcentar" (click)="mostrarTiempo()">Aceptar</button>
+                    <button class="btnTiempoCanselar" (click)="ocultarTiempoP()">Cancelar</button>
+                </div>
+            </section>
+            }
+        </section>
+    </div>
+    <section class="infoGeneral">
+        <div class="infoGeneral--goles">
+            <article>{{golesEquipo1}}</article>
+            <h1>{{nombreEquipo1}}</h1>
+        </div>
+        <div class="infoGeneral--tiempo">{{tiempoEstimado}}</div>
+        <div class="infoGeneral--goles">
+            <h1>{{nombreEquipo2}}</h1>
+            <article>{{golesEquipo2}}</article>
+        </div>
+    </section>
+</section>
+
+<section class="marcaciones">
+    <app-equipo-1 
+        [confirm]="confirmarPartido_22" (marcador1)="pepe($event)" 
+        [estadoPartido]="estadoPartido2Padre"
+        [cuentaRegresiva]="cuentaRegresiva"
+        [nombreEquipo1]="nombreEquipo1"
+        [imgEquipo]="imagePathHijo">
+    </app-equipo-1>
+
+    @if (cuentaRegresiva) {<div><img src="../../assets/321.gif" alt=""></div>}
+
+    <app-equipo-2 
+        [confirm]="confirmarPartido_22" (marcador2)="coco($event)" 
+        [estadoPartido]="estadoPartido1Padre"
+        [cuentaRegresiva]="cuentaRegresiva"
+        [nombreEquipo2]="nombreEquipo2"
+        [imgEquipo]="imagePathHijo2">
+    </app-equipo-2>
+</section>
+
+<footer>
+    <audio id="audio" src="../../assets/3 2 1 0 go.mp3"></audio>
+    <button (click)="comenzarPartido()" id="comenzarPartido">Start Game</button>
+</footer>
