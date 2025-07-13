@@ -3,7 +3,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
 }
 
 main article{
@@ -22,7 +21,6 @@ main .nombresEquipos {
     align-items: center;
     padding: 0vh 8vh;
     height: 88%;
-    /* border: 1px solid white; */
 }
 
 .nombresEquipos .coco{
@@ -33,7 +31,6 @@ main .nombresEquipos {
     align-items: center;
     flex-direction: column;
     gap: 3vh;
-    /* border: 1px solid red; */
 }
 
 .nombresEquipos .fondoLogo{
@@ -71,7 +68,6 @@ main .nombresEquipos {
 
 .nombresEquipos section div{
     height: 5.1vh;
-    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,7 +83,6 @@ main .nombresEquipos {
 }
 
 .fusionLogo{
-    /* border: 1px solid red; */
     position: relative;
 }
 .fusionLogo .fusionLogo--equipo{
@@ -144,7 +139,6 @@ main .nombresEquipos {
     align-items: center;
 }
 .infoGeneral div{
-    /* border: 1px solid red; */
     height: 100%;
     width: 28vh;
 }
@@ -164,13 +158,11 @@ main .nombresEquipos {
 }
 
 .infoGeneral .infoGeneral--goles{
-    /* background: white; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 3vh;
     width: 32vh;
-    /* border: 1px solid red; */
 }
 
 .infoGeneral--goles article{
@@ -193,10 +185,7 @@ main .nombresEquipos {
     justify-content: space-between;
     align-items: center;
     padding: 0vh 20vw;
-    /* border: 1px solid red; */
 }
-
-
 
 .marcaciones div{
     margin-top: 1vh;
@@ -360,9 +349,6 @@ main .anotaciones{
     width: 100vw;
     background: rgb(0, 0, 0);
     z-index: 1;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .equipoGanador h1{
@@ -392,7 +378,6 @@ main .anotaciones{
     align-items: center;
     height: 100%;
     width: 100%;
-    /* border: 1px solid red; */
 }
 
 .equipoGanador .equipoGanador_div img{

@@ -4,7 +4,7 @@
             <div class="coco">
                 @if (selectEquipo1) {
                     <section>
-                        <div (click)="equipo1Manchester()">
+                        <div (click)="equipo1Manchester()" (click)="handleClick()" (keydown)="handleKeyDown($event)" tabindex="0">
                             <p>Manchester</p>
                             <img src="../../assets/seletEquipo/ciudad.png" alt="">
                         </div>

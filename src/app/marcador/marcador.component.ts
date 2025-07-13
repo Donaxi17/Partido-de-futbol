@@ -1,8 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { Equipo1Component } from '../equipo-1/equipo-1.component';
 import { Equipo2Component } from '../equipo-2/equipo-2.component';
 import { FormsModule } from '@angular/forms';
-import { fakeAsync } from '@angular/core/testing';
 
 @Component({
   selector: 'app-marcador',
@@ -11,7 +10,7 @@ import { fakeAsync } from '@angular/core/testing';
   templateUrl: './marcador.component.html',
   styleUrl: './marcador.component.css'
 })
-export class MarcadorComponent {
+export class MarcadorComponent implements OnInit {
 
   audio!: HTMLAudioElement;
 
@@ -65,10 +64,10 @@ export class MarcadorComponent {
   nombreEquipo2 = "Team 2"
   ocultarBtnSelectTeam = true
 
-  imagePath: string = 'assets/equipoPrincipal/ciudad.png';
-  imagePathHijo: string = '';
-  imagePath2: string = 'assets/equipoPrincipal/ciudad.png';
-  imagePathHijo2: string = '';
+  imagePath = 'assets/equipoPrincipal/ciudad.png';
+  imagePathHijo = '';
+  imagePath2 = 'assets/equipoPrincipal/ciudad.png';
+  imagePathHijo2 = '';
 
   @Output() totalGoles_1 = new EventEmitter
   @Output() totalGoles_2 = new EventEmitter
@@ -92,7 +91,7 @@ export class MarcadorComponent {
     }
   }
 
-  cambiartiempo(valor: String) {
+  cambiartiempo(valor: string) {
     if (valor == "2") {
       this.tiempoEstimado = "2:00"
       this.mostrar_Op_Tiempo = false
@@ -219,7 +218,7 @@ export class MarcadorComponent {
     }
   }
 
-  pepe(goles_1: String) {
+  pepe(goles_1: string) {
     this.golesEquipo1 = goles_1.toString()
     if (this.golesEquipo1 > this.golesEquipo2) {
       this.estadoPartido2Padre = "Winning"
@@ -232,7 +231,7 @@ export class MarcadorComponent {
       this.estadoPartido1Padre = "Tie"
     }
   }
-  coco(goles_2: String) {
+  coco(goles_2: string) {
     this.golesEquipo2 = goles_2.toString()
     if (this.golesEquipo2 > this.golesEquipo1) {
       this.estadoPartido1Padre = "Winning"
@@ -371,6 +370,17 @@ export class MarcadorComponent {
     this.selectEquipo2 = false
     this.fondoLogoequipo2 = true
     this.btnComenzarFun()
+  }
+
+  handleKeyDown(event: KeyboardEvent): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      this.handleClick();
+    }
+  }
+  
+  handleClick(): void {
+    console.log('Elemento clicado');
+    alert('Elemento clicado');
   }
 
 }

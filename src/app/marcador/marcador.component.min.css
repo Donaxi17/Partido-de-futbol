@@ -1,0 +1,401 @@
+main {
+    align-items: center;
+    display: flex;
+    height: 44vh;
+    justify-content: center
+}
+
+main article {
+    background-color: rgba(21, 22, 75, .7);
+    border: .1vh solid rgba(0, 0, 0, .2);
+    border-radius: 6vh;
+    box-shadow: 0 0 1vh .6vh hsla(0, 0%, 100%, .7);
+    height: 90%;
+    width: 44%
+}
+
+main .nombresEquipos {
+    align-items: center;
+    display: flex;
+    height: 88%;
+    justify-content: space-between;
+    margin-top: 2vh;
+    padding: 0 8vh
+}
+
+.nombresEquipos .coco {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    height: 24vh;
+    justify-content: center;
+    width: 24vh
+}
+
+.nombresEquipos .fondoLogo {
+    border-radius: 16vh;
+    height: 100%;
+    user-select: none;
+    width: 100%
+}
+
+.nombresEquipos h1 {
+    color: #fff;
+    font-size: 5vh
+}
+
+.nombresEquipos button {
+    border: .3vh solid gray;
+    border-radius: 1vh;
+    font-size: 1.6vh;
+    min-height: 4vh;
+    user-select: none;
+    width: 13vh
+}
+
+.nombresEquipos button:hover {
+    background: rgba(21, 22, 75, .9);
+    border: .3vh solid #fff;
+    color: #fff;
+    cursor: pointer
+}
+
+.nombresEquipos section {
+    background: #fff;
+    min-height: 106%;
+    min-width: 110%
+}
+
+.nombresEquipos section div {
+    align-items: center;
+    display: flex;
+    font-size: 2.2vh;
+    height: 5.1vh;
+    justify-content: space-between;
+    padding: 0 2vh;
+    user-select: none
+}
+
+.nombresEquipos section div:hover {
+    background: rgba(21, 22, 75, .9);
+    color: #fff;
+    cursor: pointer
+}
+
+.fusionLogo {
+    position: relative
+}
+
+.fusionLogo .fusionLogo--equipo {
+    height: 40%;
+    position: absolute;
+    width: 40%
+}
+
+.contenPartido {
+    flex-direction: column;
+    height: 20vh;
+    margin-top: 2vh
+}
+
+.contenPartido,
+.contenPartido--tiempo,
+.contenPartido--tiempo article {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.contenPartido--tiempo article {
+    background: #fff;
+    border: .3vh solid gray;
+    border-radius: 1vh;
+    height: 6vh;
+    user-select: none;
+    width: 18vh
+}
+
+.contenPartido--tiempo article:hover {
+    background: rgba(21, 22, 75, .9);
+    border: .3vh solid #fff;
+    color: #fff;
+    cursor: pointer
+}
+
+.contenPartido .infoGeneral {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 2vh;
+    height: 12vh;
+    width: 100vh
+}
+
+.infoGeneral {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.infoGeneral div {
+    height: 100%;
+    width: 28vh
+}
+
+.infoGeneral .infoGeneral--tiempo {
+    align-items: center;
+    background: rgba(21, 22, 75, .9);
+    border: .1vh solid hsla(0, 0%, 100%, .4);
+    border-radius: 2vh;
+    box-shadow: 0 0 1vh .4vh rgba(21, 22, 75, .9);
+    color: #fff;
+    display: flex;
+    font-weight: 800;
+    height: 60%;
+    justify-content: center;
+    width: 16vh
+}
+
+.infoGeneral .infoGeneral--goles {
+    align-items: center;
+    display: flex;
+    font-size: 3vh;
+    justify-content: space-between;
+    width: 32vh
+}
+
+.infoGeneral--goles article {
+    align-items: center;
+    background: #000;
+    border-radius: 2vh;
+    color: #fff;
+    display: flex;
+    font-size: 5vh;
+    font-weight: 800;
+    height: 100%;
+    justify-content: center;
+    width: 12vh
+}
+
+.marcaciones {
+    align-items: center;
+    display: flex;
+    height: 20vh;
+    justify-content: space-between;
+    margin-top: 4vh;
+    padding: 0 20vw
+}
+
+.marcaciones div {
+    height: 74%;
+    margin-top: 1vh;
+    width: 22%
+}
+
+.marcaciones div img {
+    height: 100%;
+    width: 100%
+}
+
+footer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh
+}
+
+footer button {
+    background: gray;
+    border: none;
+    border-radius: 2vh;
+    color: hsla(0, 0%, 100%, .7);
+    cursor: no-drop;
+    font-size: 2.4vh;
+    height: 5vh;
+    width: 22vh
+}
+
+main .anotaciones {
+    gap: 3vh;
+    margin-top: 5vh
+}
+
+.anotaciones div,
+main .anotaciones {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.anotaciones div {
+    height: 16vh
+}
+
+.anotaciones h1 {
+    font-size: 10vh
+}
+
+.tiempo,
+.tiempo .tiempo--div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.tiempo .tiempo--div {
+    background: #f7f7f7;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    height: 6.6vh;
+    user-select: none;
+    width: 14vh
+}
+
+.tiempo h5,
+.tiempo p {
+    font-size: 2vh;
+    margin-top: .6vh
+}
+
+.tiempo .opTiempo {
+    display: flex
+}
+
+.tiempo .opTiempo button {
+    border: .1vh solid rgba(0, 0, 0, .7);
+    cursor: pointer;
+    height: 5vh;
+    margin-bottom: 1vh;
+    user-select: none;
+    width: 18vh
+}
+
+.tiempo .opTiempo button:hover {
+    background: #10aca4;
+    color: #fff
+}
+
+.tiempo .tiempoPersonalizado {
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 1vh .1vh #059b92;
+    display: flex;
+    gap: 2vh;
+    height: 7vh;
+    justify-content: center;
+    margin-bottom: 1vh;
+    padding: 0 1vh;
+    width: 36vh
+}
+
+.tiempoPersonalizado input {
+    height: 4vh;
+    padding-left: 1vh;
+    width: 80%
+}
+
+.tiempoPersonalizado div {
+    display: flex;
+    gap: 2vh
+}
+
+.tiempoPersonalizado button {
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    font-size: 1.6vh;
+    font-weight: 700;
+    height: 4vh;
+    user-select: none;
+    width: 10vh
+}
+
+.btnTiempoAcentar {
+    background: #12d2c8
+}
+
+.btnTiempoCanselar {
+    background: rgba(255, 68, 0, .8);
+    color: #fff
+}
+
+.partidoComensara {
+    color: #fff;
+    font-size: 3.2vh;
+    margin-left: 34vh;
+    margin-top: -5vh
+}
+
+.partidoFinalizara {
+    background-color: red;
+    color: #fff;
+    font-size: 2.2vh;
+    margin-left: 30vh;
+    margin-top: -5.6vh;
+    padding: 1vh;
+    width: 40vh
+}
+
+.tiempo .equipoGanador {
+    background: #000;
+    height: 116.2vh;
+    position: absolute;
+    width: 100vw;
+    z-index: 1
+}
+
+.equipoGanador h1 {
+    color: #fff;
+    position: absolute
+}
+
+.equipoGanador button {
+    border: none;
+    border-radius: 1vh;
+    font-size: 1.8vh;
+    height: 5vh;
+    margin-top: 26vh;
+    width: 12vh
+}
+
+.equipoGanador button:hover {
+    background-color: #059b92;
+    color: #fff;
+    cursor: pointer;
+    user-select: none
+}
+
+.equipoGanador .equipoGanador_div {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.equipoGanador .equipoGanador_div img {
+    height: 100%;
+    width: 100%
+}
+
+.equipoGanador_div div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    width: 30vw
+}
+
+.equipoGanador_div div h1 {
+    font-size: 4vh
+}
+
+@media (max-width:1360px) {
+    main .nombresEquipos {
+        padding: 0 4vh
+    }
+}

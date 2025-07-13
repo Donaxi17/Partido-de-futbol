@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, Output, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-equipo-1',
@@ -7,7 +7,7 @@ import { ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } fro
   templateUrl: './equipo-1.component.html',
   styleUrl: './equipo-1.component.css'
 })
-export class Equipo1Component {
+export class Equipo1Component implements OnChanges {
 
   @Input() confirm?: boolean;
   @Input() cuentaRegresiva?: boolean;
@@ -15,7 +15,7 @@ export class Equipo1Component {
   @Input() nombreEquipo1?: string
   @Input() imgEquipo?: string
   
-  @Output() marcador1 = new EventEmitter<String>()
+  @Output() marcador1 = new EventEmitter<string>()
 
   constructor(private cdr: ChangeDetectorRef) { }
 
